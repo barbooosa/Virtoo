@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso Information</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin: 20px;
+    }
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Curso Information</h1>
+
+  <h2>Curso Details</h2>
+  <table>
+    <tr>
+      <th>Nome do Curso</th>
+      <th>Número de Períodos</th>
+    </tr>
+    <tr>
+      <td><%= curso.nome %></td>
+      <td><%= curso.periodos.length %></td>
+    </tr>
+  </table>
+
+  <h2>Materias</h2>
+  <% curso.periodos.forEach((periodo, index) => { %>
+    <h3>Período <%= index + 1 %></h3>
+    <table>
+      <tr>
+        <th>Materia</th>
+      </tr>
+      <% periodo.materias.forEach((materia) => { %>
+        <tr>
+          <td><%= materia %></td>
+        </tr>
+      <% }); %>
+    </table>
+  <% }); %>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-- views/editar-materia.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ... -->
+</head>
+<body>
+
+  <h1>Editar Matéria</h1>
+
+  <form action="/editar/curso/<%= curso._id %>/<%= periodoEditar._id %>" method="post">
+    <label for="periodo">Período:</label>
+    <input type="text" id="periodo" name="periodo" value="<%= periodoEditar.periodo %>" required>
+
+    <label for="materias">Matérias:</label>
+    <% if (periodoEditar.materiasLista && periodoEditar.materiasLista.length > 0) { %>
+      <input type="text" id="materias" name="materias" value="<%= periodoEditar.materiasLista.map(materia => materia.nome).join(', ') %>" required>
+    <% } else { %>
+      <input type="text" id="materias" name="materias" value="" required>
+    <% } %>
+
+    <!-- Adicione outros campos do formulário conforme necessário -->
+
+    <button type="submit">Salvar Alterações</button>
+  </form>
+
+</body>
+</html>

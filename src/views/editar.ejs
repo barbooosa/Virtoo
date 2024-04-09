@@ -1,0 +1,16 @@
+<!-- editar.ejs -->
+<html>
+   <head>
+      <title>Editar Registro</title>
+   </head>
+   <body>
+      <h1>Editar Registro</h1>
+      <form method="post" action="/editar/<%= registro._id %>">
+         <!-- Campos do formulário para editar dados -->
+         <label for="name">Nome:</label>
+         <input type="text" name="name" value="<%= registro.name %>">
+         <!-- Adicione mais campos conforme necessário -->
+         <button type="submit">Salvar</button>
+      </form>
+   </body>
+</html>
