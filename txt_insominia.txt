@@ -1,0 +1,46 @@
+//PROFESSOR
+
+{
+	  "name" :"",
+      "sex" : "",
+      "estadocivil" : "",
+      "birthday" : "",
+      "cpf" : "",
+      "email" : "",
+      "fone" : "",
+      "endereco" : "",
+      "materia" : "",
+      "turno" : "",
+      "numberidentify" : ""
+}
+
+
+
+{
+			"name" :"Luiz",
+      "sex" : "Masculino",
+      "estadocivil" : "Solteiro",
+      "birthday" : "18/10/98",
+      "cpf" : "14141415150",
+      "email" : "luiz@email.com",
+      "fone" : "+244 5515 1511",
+      "endereco" : "angolano",
+      "materia" : "Medicina",
+      "turno" : "Vespertino",
+      "numberidentify" : "6464444"
+}
+
+//ALUNO
+
+{  
+		"name" : "",
+        "birthday": "",
+        "cpf" : "",
+        "email" : "",
+        "fone" :"",
+        "endereco" : "",
+        "matricu" : "",
+        "curso" : "",
+        "periodo" : "",
+        "turno" : ""
+}

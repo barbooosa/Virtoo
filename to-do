@@ -1,0 +1,36 @@
+⚪- Fazer  🟢- Pronto
+
+⚪- API Calendário
+⚪- API Verificação de cpf e email
+🟢- Sistema de cadastro
+🟢- Sistema de Login
+⚪- Rotas
+⚪- Verificar latencia do banco de dados
+🟢- Criptografia de senhas
+🟢- Acesso as telas
+🟢- Cadastro Aluno
+        Nome completo
+        Data de Nascimento
+        N. de identidade
+        E-mail
+        Numero de telefone
+        Endereço
+        N. da Matricula
+        Curso
+        Periodo
+        Turno
+        
+🟢- Cadastro Professor
+        Nome completo
+        Estado civil
+        Sexo
+        E-mail
+        Numero de Telefone
+        Endereço
+        N. de Identificação
+        Turno
+        Disciplina selecionadas
+
+⚪- Criar conta ADMIN
+⚪- Alterar dados do professor
+⚪- Alterar dados do aluno

@@ -1,0 +1,54 @@
+<!-- views/adicionar-materia.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adicionar Matéria</title>
+</head>
+<body>
+
+  <h1>Adicionar Matéria</h1>
+
+  <form action="/adicionar-materia" method="post" onsubmit="return validarFormulario()">
+    <label for="curso">Curso:</label>
+    <input type="text" id="curso" name="curso" required>
+
+    <label for="periodo">Período:</label>
+    <input type="number" id="periodo" name="periodo" required>
+
+    <!-- Adicione outros campos conforme necessário -->
+
+    <button type="submit">Adicionar Matéria</button>
+  </form>
+
+  <script>
+    async function validarFormulario() {
+      // Recupera o valor do curso e do período
+      var curso = document.getElementById('curso').value;
+      var periodo = document.getElementById('periodo').value;
+
+      // Faz uma requisição para verificar se o curso e o período existem no backend
+      var resposta = await fetch('/verificar-existencia', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ curso, periodo }),
+      });
+
+      var resultado = await resposta.json();
+
+      if (resultado.existe) {
+        alert('Já existe um período ' + periodo + ' para o curso ' + curso + '.');
+        return false;
+      }
+
+      // Se não encontrou um período existente, o formulário pode ser enviado
+      return true;
+    }
+  </script>
+
+</body>
+</html>

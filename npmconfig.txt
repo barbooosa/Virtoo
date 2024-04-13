@@ -1,0 +1,7 @@
+npm i nodemon
+npm i express
+npm i mongoose
+npm i mongodb
+npm init -y
+npm nodemon -D
+$ npm install @googleapis/calendar   
